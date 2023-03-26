@@ -1,0 +1,46 @@
+
+<form class="c-form" action="" method="post"> 
+  <div class="c-form__title">留言給我們</div>
+  <div class="c-form__wrap"> 
+    <div class="c-form__name">
+      <label class="label" for="name">姓名</label>
+      <input class="input-field" id="name" type="text" name="name" placeholder="請輸入姓名" required="required"/>
+    </div>
+    <div class="c-form__gender">
+      <label class="label" for="male">先生</label>
+      <input class="input-field radio" id="male" type="radio" name="gender" value="male" required="required" checked="checked"/>
+      <label class="label" for="female">小姐</label>
+      <input class="input-field radio" id="female" type="radio" name="gender" value="female" required="required"/>
+      <label class="label" for="other">其他</label>
+      <input class="input-field radio" id="other" type="radio" name="gender" value="other" required="required"/>
+    </div>
+    <div class="c-form__tel">
+      <label class="label" for="tel">連絡電話</label>
+      <input class="input-field" id="name" type="number" name="tel" placeholder="請輸入電話" required="required"/>
+    </div>
+    <div class="c-form__wrap-type">
+      <select class="input-field" id="type" name="type" required="required">
+        <option value="" selected="selected" disabled="disabled">請選擇問題類型</option>
+        <optgroup label="建議與反饋">
+          <option value="service">關於服務</option>
+          <option value="product">關於產品</option>
+          <option value="branch">關於門市</option>
+          <option value="advise">建議</option>
+          <option value="other">其他</option>
+        </optgroup>
+        <optgroup label="合作">
+          <option value="cooperation">商業合作</option>
+          <option value="appointed">特約</option>
+        </optgroup>
+        <optgroup label="其他">
+          <option value="other">其他</option>
+        </optgroup>
+      </select>
+    </div>
+    <div class="c-form__content">
+      <label class="label" for="message">說明</label>
+      <textarea class="input-field textarea" id="message" name="message" placeholder="說明文字300字以內"></textarea>
+      <button type="submit">送出</button>
+    </div>
+  </div>
+</form>

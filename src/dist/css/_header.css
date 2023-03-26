@@ -1,0 +1,9 @@
+.l-header {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../img/banner/banner01.jpg);
+  background-size: cover;
+  background-size: center center;
+  height: 100vh;
+  z-index: 20;
+}

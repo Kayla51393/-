@@ -1,0 +1,35 @@
+form.c-form(action="", method="post") 
+    .c-form__title 留言給我們
+    .c-form__wrap 
+        .c-form__name
+            label.label(for='name') 姓名
+            input#name.input-field(type='text' name='name' placeholder='請輸入姓名' required)
+        .c-form__gender
+            //--點選框一直不能移動到選項名稱前面
+            label.label(for='male') 先生
+            input#male.input-field.radio(type='radio' name='gender' value='male' required checked)
+            label.label(for='female') 小姐
+            input#female.input-field.radio(type='radio' name='gender' value='female' required)
+            label.label(for='other') 其他
+            input#other.input-field.radio(type='radio' name='gender' value='other' required)
+        .c-form__tel
+            label.label(for='tel') 連絡電話
+            input#name.input-field(type='number' name='tel' placeholder='請輸入電話' required)
+        .c-form__wrap-type
+            select#type.input-field(name='type' required)
+                option(value='' selected disabled) 請選擇問題類型
+                optgroup(label='建議與反饋')
+                    option(value='service') 關於服務
+                    option(value='product') 關於產品
+                    option(value='branch') 關於門市
+                    option(value='advise') 建議
+                    option(value='other') 其他
+                optgroup(label='合作')
+                    option(value='cooperation') 商業合作
+                    option(value='appointed') 特約
+                optgroup(label='其他')
+                    option(value='other') 其他
+        .c-form__content
+            label.label(for='message') 說明
+            textarea#message.input-field.textarea(name='message' placeholder='說明文字300字以內')
+            button(type='submit') 送出

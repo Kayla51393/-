@@ -1,0 +1,114 @@
+doctype html
+html(lang="en")
+  head
+    //-- pug include (只有pug可以這樣用): 1.將其他東西引入  2. include 有先後順序
+    include includes/_config.pug
+    include includes/_head.pug
+
+    //- 網頁描述
+    meta(property="og:description" content=description)
+    meta(name="description" content=description)
+    meta(property="og:title" content=title)
+    title #{title}
+  body
+    
+    include includes/_navbar.pug
+    header.l-header#header
+      include includes/_menu.pug
+    //--菜單照片+輪轉動畫
+    main.main#main
+      section#menu.l-menu
+        .container.u-mb-30
+          h2.u-title 菜單
+        .l-menu__container
+          .swiper.l-menu__swiper
+            .swiper-wrapper 
+              .swiper-slide.l-menu__slide
+                .l-menu__img-mask
+                  img(src="img/menu/menu_N.jpg", alt="")
+                h3.u-mt-30.u-title-md 北部
+              .swiper-slide.l-menu__slide
+                .l-menu__img-mask
+                  img(src="img/menu/menu_M.jpg", alt="")
+                h3.u-mt-30.u-title-md 中部 
+              .swiper-slide.l-menu__slide
+                .l-menu__img-mask
+                  img(src="img/menu/menu_S.jpg", alt="")
+                h3.u-mt-30.u-title-md 南部 
+              .swiper-slide.l-menu__slide
+                .l-menu__img-mask
+                  img(src="img/menu/menu_E.jpg", alt="")
+                h3.u-mt-30.u-title-md 花東 
+              .swiper-slide.l-menu__slide
+                .l-menu__img-mask
+                  img(src="img/menu/menu_I.jpg", alt="")
+                h3.u-mt-30.u-title-md 離島
+      //-- 插入bootstrap+一張新品照片與介紹
+      section.l-newIn#newIn
+        .container.u-mb-30
+          h2.u-title 新品上市
+        .container.--narrow
+          .row
+            .col-md-6
+              .l-newIn__img-mask
+                img.u-object-fit.--abs(src="img/New in/newIn_01.jpg", alt="")
+            .col-md-6
+              .l-newIn__content-wrap.u-ml-10
+                .l-newIn__content
+                  h3.u-title-md.u-mb-50 草莓果粒波波
+                  p.u-mb-35 麻古新春最強草莓新品「草莓果粒波波」，以新鮮草莓、綠茶凍、草莓冰沙，加上咀嚼控最愛的寒天波波，組成口感超豐富的夢幻飲品，滿滿一杯喝下幸福破表。
+                  span.u-color-danger **為保持最佳風味，糖冰不可調整
+      //-- 插入bootstrap+網頁連結+一張小圖
+      section.l-order#order
+        .container.u-mb-30
+          h2.u-title 立即點餐
+        .container.--narrow
+          .row 
+            .col-md-6.l-order__content
+              a.l-order__btn.u-title-lg(href="https://www.eathere.com.tw/MaceWebPhone/confirm.php") 點餐去
+            .col-md-6
+              .l-order__img-mask
+                img.u-object-fit.--abs(src="img/order/order_01.jpg", alt="")
+      section.l-news#news
+        .container.u-mb-30
+          h2.u-title 最新消息
+        .container.--narrow
+          .row
+            .col-md-4.col-sm-6
+              article.c-card
+                .c-card__img-mask.u-mb-10
+                  img.u-object-fit.--top.--abs(src="img/news/news_01.png", alt="")
+                h3.u-title-sm.u-mb-15 麻古環保日！3/15-3/17全面啟動
+                span.c-card__date.u-mb-10 3/17
+                p.u-mb-20 麻古環保日！3/15-3/17全面啟動asfsafddfsf
+            .col-md-4.col-sm-6
+              article.c-card
+                .c-card__img-mask.u-mb-10
+                  img.u-object-fit.--top.--abs(src="img/news/news_02.jpg", alt="")
+                h3.u-title-sm.u-mb-15 麻古環保日！
+                span.c-card__date.u-mb-10 2/14
+                p.u-mb-20 麻古環保日！3/15-3/17全面啟動asfsafddfsf
+            .col-md-4.col-sm-6
+              article.c-card
+                .c-card__img-mask.u-mb-10
+                  img.u-object-fit.--top.--abs(src="img/news/news_03.jpg", alt="")
+                h3.u-title-sm.u-mb-15 麻古環保日！3/15-3/17全面啟動
+                span.c-card__date.u-mb-10 1/5
+                p.u-mb-20 麻古環保日asfsafddfsf
+      section.l-contect#contect
+        .container.u-mb-30
+          h2.u-title 聯絡我們
+        .container.--narrow
+          .row 
+            .col-md-6
+              .l-contect__wrap
+                h3.l-contect__title.u-title-lg 門　市
+                .l-contect__content.u-mb-50 一行說明一行說明一行說明一行說明一行說明
+            .col-md-6.u-bl-gray
+              .l-contect__wrap
+                h3.l-contect__title.u-title-lg 留　言
+                .l-contect__content.u-mb-50 一行說明一行說明一行說明一行說明一行說明
+                include includes/_form.pug
+      include includes/_footer.pug
+    script(src="js/swiper-bundle.min.js")
+    include includes/_scripts.pug
